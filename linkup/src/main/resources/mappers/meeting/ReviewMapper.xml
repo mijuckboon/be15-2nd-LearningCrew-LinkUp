@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.learningcrew.linkup.meeting.query.mapper.ReviewMapper">
+<mapper namespace="com.learningcrew.linkup.meeting.query.infrastructure.ReviewMapper">
 
-    <select id="selectAllParticipantReviews" resultType="com.learningcrew.linkup.meeting.query.dto.response.ParticipantReviewDTO">
+    <select id="selectAllParticipantReviews" resultType="com.learningcrew.linkup.meeting.query.application.dto.response.ParticipantReviewDTO">
         SELECT
             r.review_id AS reviewId,
             r.score,
@@ -21,7 +21,7 @@
         ORDER BY r.created_at DESC
     </select>
 
-    <select id="selectReviewsByReviewer" resultType="com.learningcrew.linkup.meeting.query.dto.response.ParticipantReviewDTO">
+    <select id="selectReviewsByReviewer" resultType="com.learningcrew.linkup.meeting.query.application.dto.response.ParticipantReviewDTO">
         SELECT
         r.review_id AS reviewId,
         r.score,
@@ -38,7 +38,7 @@
         ORDER BY r.created_at DESC
     </select>
 
-    <select id="selectReviewsByReviewee" resultType="com.learningcrew.linkup.meeting.query.dto.response.ParticipantReviewDTO">
+    <select id="selectReviewsByReviewee" resultType="com.learningcrew.linkup.meeting.query.application.dto.response.ParticipantReviewDTO">
         SELECT
         r.review_id AS reviewId,
         r.score,

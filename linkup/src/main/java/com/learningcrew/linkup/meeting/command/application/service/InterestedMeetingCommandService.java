@@ -1,6 +1,6 @@
 package com.learningcrew.linkup.meeting.command.application.service;
 
-import com.learningcrew.linkup.meeting.command.application.dto.request.InterestedMeetingCommandRequest;
+import com.learningcrew.linkup.meeting.command.presentation.dto.request.InterestedMeetingCommandRequest;
 
 public interface InterestedMeetingCommandService {
 

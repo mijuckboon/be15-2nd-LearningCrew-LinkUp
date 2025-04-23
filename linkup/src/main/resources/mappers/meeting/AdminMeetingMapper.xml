@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.learningcrew.linkup.meeting.query.mapper.AdminMeetingMapper">
+<mapper namespace="com.learningcrew.linkup.meeting.query.infrastructure.AdminMeetingMapper">
 
-    <select id="selectAllMeetings" resultType="com.learningcrew.linkup.meeting.query.dto.response.MeetingSummaryDTO">
+    <select id="selectAllMeetings" resultType="com.learningcrew.linkup.meeting.query.application.dto.response.MeetingSummaryDTO">
         SELECT
             m.meeting_id AS meetingId,
             mem.nickname AS leaderNickname,

@@ -1,6 +1,7 @@
 package com.learningcrew.linkup.meeting.command.domain.aggregate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.learningcrew.linkup.meeting.command.domain.service.MeetingParticipantCounter;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -8,6 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.function.Supplier;
 
 @Entity
 @Table(name = "meeting")
@@ -16,6 +18,12 @@ import java.time.LocalTime;
 @Getter
 @Builder
 public class Meeting {
+
+    private static final int STATUS_PENDING = 1;
+    private static final int STATUS_ACCEPTED = 2;
+    private static final int STATUS_REJECTED = 3;
+    private static final int STATUS_DELETED = 4;
+    private static final int STATUS_DONE = 5;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,4 +54,19 @@ public class Meeting {
     private Double latitude;
     private Double longitude;
 
+
+    public void updateStatus(MeetingParticipantCounter counter) {
+        val participantsCount = counter.count(meetingId);
+        if (participantsCount < minUser) {
+            statusId = STATUS_PENDING;
+        }
+
+        if (participantsCount >= minUser && participantsCount < maxUser) {
+            statusId = STATUS_ACCEPTED;
+        }
+
+        if (participantsCount == maxUser) {
+            statusId = STATUS_REJECTED;
+        }
+    }
 }

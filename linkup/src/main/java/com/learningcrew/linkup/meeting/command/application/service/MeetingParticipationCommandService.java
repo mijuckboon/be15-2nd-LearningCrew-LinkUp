@@ -1,6 +1,6 @@
 package com.learningcrew.linkup.meeting.command.application.service;
 
-import com.learningcrew.linkup.meeting.command.application.dto.request.MeetingParticipationCreateRequest;
+import com.learningcrew.linkup.meeting.command.presentation.dto.request.MeetingParticipationCreateRequest;
 import com.learningcrew.linkup.meeting.command.domain.aggregate.Meeting;
 import com.learningcrew.linkup.meeting.command.domain.aggregate.MeetingParticipationHistory;
 

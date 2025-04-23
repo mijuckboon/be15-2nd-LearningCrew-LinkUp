@@ -2,7 +2,7 @@ package com.learningcrew.linkup.meeting.command.application.service;
 
 import com.learningcrew.linkup.exception.BusinessException;
 import com.learningcrew.linkup.exception.ErrorCode;
-import com.learningcrew.linkup.meeting.command.application.dto.request.InterestedMeetingCommandRequest;
+import com.learningcrew.linkup.meeting.command.presentation.dto.request.InterestedMeetingCommandRequest;
 import com.learningcrew.linkup.meeting.command.domain.aggregate.InterestedMeeting;
 import com.learningcrew.linkup.meeting.command.domain.aggregate.InterestedMeetingId;
 import com.learningcrew.linkup.meeting.command.domain.repository.InterestedMeetingRepository;

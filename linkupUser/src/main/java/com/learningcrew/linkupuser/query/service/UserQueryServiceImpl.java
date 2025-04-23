@@ -1,6 +1,5 @@
 package com.learningcrew.linkupuser.query.service;
 
-
 import com.learningcrew.linkupuser.common.dto.query.RoleDTO;
 import com.learningcrew.linkupuser.common.query.mapper.RoleMapper;
 import com.learningcrew.linkupuser.exception.BusinessException;
@@ -11,6 +10,7 @@ import com.learningcrew.linkupuser.query.dto.response.UserProfileResponse;
 import com.learningcrew.linkupuser.query.dto.response.UserStatusResponse;
 import com.learningcrew.linkupuser.query.mapper.MemberMapper;
 import com.learningcrew.linkupuser.query.mapper.UserMapper;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
